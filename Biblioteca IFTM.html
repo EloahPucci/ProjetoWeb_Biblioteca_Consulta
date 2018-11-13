@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+		<title>Biblioteca IFTM</title>
+		<link type="text/css" rel="stylesheet" href="css/usabilidade.css"/>
+        
+	</head>
+	
+	<body>
+		<header>
+			<h1>Biblioteca Concurseiros</h1>
+			<p>Consulta on-line de materiais gratuitos para quem está estudando para prestar concursos</p>
+		</header>
+		
+		<section>
+			<form>
+				<label for="autor">Autor(es)</label>
+				<input id="txtAutor" type="text" name="autor" placeholder="Ex: Maria; José"/>
+				<label for="assunto">Assunto(s)</label>
+				<input id="txtAssunto" type="text" name="assunto" placeholder="Ex: HTML; JavaScript"/>
+                <details>
+                    <summary>Consulta avançada</summary>
+                    <label for="ISBN">ISBN</label>
+                    <input id="numberIsbn" type="text" name="ISBN" placeholder="Informe o Iternational Standard Book Number (10 ou 13 dígitos)"/>
+                </details>
+                
+                <div id="divProgress"  class="invisivel">
+                <progress id="barraProgressoPesquisar" max="100" value="0"><span>Eloah</span></progress>
+                    
+                <p id="paragContador">A consulta será finalizada em <span id="contador">50</span> segundos.</p>
+                </div>                
+                
+                <div id="divBotoes">
+                    <input id="btnPesquisar" class="botao" type="button" value="Pesquisar" onclick="Cronometro()"/>
+                    <input class="botao" type="reset" value="Limpar"/>
+                    <a href="doc/Documento_De_Ajuda.pdf"><input class="botao" type="button" value="Ajuda"/></a>
+                </div>				
+			</form>
+		</section>
+        
+        <script>
+            var expAutor = /\w\s/
+        </script>
+	</body>
+    
+    <script src="js/usabilidade.js"></script>
+</html>
